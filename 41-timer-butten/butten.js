@@ -1,4 +1,4 @@
-/* exported $timerButton */
+
 var $timerButton = (function() {
     var init;
       var $btn, 
