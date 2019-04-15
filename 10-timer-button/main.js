@@ -20,5 +20,4 @@ $(function(){
             alert('SPA! 01-timer-button task!');
               
       })
-
 });
