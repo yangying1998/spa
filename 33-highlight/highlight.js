@@ -16,17 +16,17 @@ $(function() {
   $('input[type="button"]').click(function() {
         var $code = $(''
                   + '<div>'
-                            + '<pre class="javascript">'
-                                      + '</pre>'
-                                                + '<i class="iconfont icon-clipboard" title="复制到剪贴板"></i>'
-                                                          + '<i class="iconfont icon-delete" title="删除"></i>'
-                                                                  + '</div>'),
+                  + '<pre class="javascript">'
+                  + '</pre>'
+                  + '<i class="iconfont icon-clipboard" title="复制到剪贴板"></i>'
+                  + '<i class="iconfont icon-delete" title="删除"></i>'
+                  + '</div>'),
                     $txt  = $('.main textarea');
 
         if($txt.val() !== '') {
                 $code.find('pre').html($txt.val());
-                      hljs.highlightBlock($code.find('pre').get(0));
-                            $('.main').append($code);
+                hljs.highlightBlock($code.find('pre').get(0));
+                $('.main').append($code);
                                 
         }
 
@@ -40,13 +40,11 @@ $(function() {
 
   $copy.click(function() {
           var $content = $code.find('pre');
-
-                var range = document.createRange();
-                      range.selectNode($content[0]);
-                            window.getSelection().addRange(range);
-
-                                  document.execCommand('copy');
-                                        window.getSelection().removeAllRanges();
+          var range = document.createRange();
+          range.selectNode($content[0]);
+          window.getSelection().addRange(range);
+          document.execCommand('copy');
+          window.getSelection().removeAllRanges();
                                             
   });
     

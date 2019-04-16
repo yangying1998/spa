@@ -20,19 +20,5 @@ $(function() {
           manualRowResize : true,     // 允许行拖动  
           manualColumnResize : true,  // 允许列拖动 
           rowHeaders: true,
-          //colHeaders: true
-          //    colHeaders: [
-          //          '字段',
-          //                '说明',
-          //                      '数据类型',
-          //                            '允许为空',
-          //                                  '主键',
-          //                                        '备注'
-          //                                            ]
-          //                                              });
-          //
-          //                                                return hot;
-          //                                                });
-          //    ]
   })
 })

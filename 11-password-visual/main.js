@@ -1,5 +1,4 @@
 $(function(){
-<<<<<<< HEAD
       var $pwd     = $('#pwd'),
         $pwdText = $('.pwd-text'),
         $eye     = $('#eye');
@@ -20,7 +19,6 @@ $eye.mouseout(function(){
 });
   
 });
-=======
     var $pwd     = $('#pwd'),
         $pwdText = $('.pwd-text'),
         $eye     = $('#eye');
@@ -37,4 +35,3 @@ $eye.mouseout(function(){
       $pwdText.css('z-index', '-10');
     });
   });
->>>>>>> 462b44b55fa10c56e59d73e87f066da20af1044a

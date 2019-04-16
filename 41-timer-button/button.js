@@ -7,29 +7,21 @@ var $timerButton = (function() {
 
 init = function(config) {
         i = config.timer;
-                  $(config.container).html(html);
-                                $btn = $('input[type="button"]');
-                                                  $btn.val(config.text + ' (' + i + ' s)');
-                                                                        $btn.attr('disabled', 'disabled');
-
-                                                                        timer = window.setInterval(function() {
-                                                                                                        $btn.val(config.text + ' (' + i-- + ' s)');
-                                                                                                        if(i === -1) {
-                                                                                                                                                  window.clearInterval(timer);
-                                                                                                                                                                                                  $btn.val(config.text);
-                                                                                                                                                                                                                                                          $btn.removeAttr('disabled');
-                                                                                                                                                                                                                                                                                                                        
-                                                                                                                                                                                                                                                                                        
-                                                                                                        }
-                                                                                                                                          
-                                                                                                                              
-                                                                        }, 1000);
-                                                                                                  
-                                                                        $btn.click(function() {
-                                                                                                        config.eventcb();
-                                                                                                                                          
-                                                                                                                              
-                                                                        });
+        $(config.container).html(html);
+        $btn = $('input[type="button"]');
+        $btn.val(config.text + ' (' + i + ' s)');
+        $btn.attr('disabled', 'disabled');
+        timer = window.setInterval(function() {
+        $btn.val(config.text + ' (' + i-- + ' s)');
+       if(i === -1) {
+          window.clearInterval(timer);
+          $btn.val(config.text);
+          $btn.removeAttr('disabled');
+        }
+      }, 1000);
+     $btn.click(funtion(){
+       config.eventcb();
+      });
                                                                                                 
 
 };
